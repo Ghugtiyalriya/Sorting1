@@ -1,0 +1,32 @@
+  #include <stdio.h>
+
+int main()
+{
+    int arr[]={83,1,45,52,11,47,0,45,67,82};
+    int i,j,t=0;
+    int l=sizeof(arr)/sizeof(arr[0]);
+    printf("For original\n");
+    for(i=0;i<l;i++)
+    {
+    printf("%d",arr[i]);
+    }
+    for(i=0;i<l;i++)
+    {
+        for(j=0;j<l;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                t=arr[i];
+                arr[i]=arr[j];
+                arr[j]=t;
+            }
+        }
+    }
+    
+    printf("\nSorting order:");
+    for(i=0;i<l;i++)
+    {
+        printf("%d",arr[i]);
+    }
+    return 0;
+}
